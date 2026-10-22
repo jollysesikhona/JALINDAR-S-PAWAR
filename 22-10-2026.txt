@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOLLYSESIKHONA | सरकारी कागदपत्रे व ऑनलाइन सेवा केंद्र, जालना</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Mukta for Marathi Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Mukta:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B192C',
+                            900: '#1E3E62',
+                        },
+                        teal: {
+                            500: '#00ADB5',
+                            600: '#008B92',
+                        },
+                        gold: {
+                            400: '#FFD700',
+                            500: '#FFC107',
+                        },
+                        brandGreen: '#10B981',
+                        brandRed: '#FF4D4D'
+                    },
+                    fontFamily: {
+                        sans: ['Mukta', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Mukta', 'Inter', sans-serif;
+            background-color: #F8FAFC;
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        .gradient-banner {
+            background: linear-gradient(135deg, #0B192C 0%, #1E3E62 50%, #00ADB5 100%);
+        }
+    </style>
+</head>
+<body class="text-slate-800 pb-20 md:pb-0">
+
+    <!-- Top Urgency Ticker -->
+    <div class="bg-gradient-to-r from-red-600 via-orange-500 to-red-600 text-white py-2 px-4 text-center font-bold text-sm md:text-base shadow-md flex justify-center items-center gap-2">
+        <span class="bg-white text-red-600 px-2 py-0.5 rounded-full text-xs font-black uppercase tracking-wider animate-bounce">विशेष ऑफर</span>
+        <span>फक्त पहिल्या २० ग्राहकांसाठी - २०% ते ५०% सवलत!</span>
+        <span class="hidden sm:inline bg-black/20 px-2 py-0.5 rounded text-xs">कोड: FIRST20</span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <!-- Brand Logo / Name -->
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-tr from-navy-900 to-teal-500 text-gold-400 p-2.5 rounded-xl shadow-lg font-black text-2xl flex items-center justify-center w-12 h-12 border border-gold-400/30">
+                    JSK
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-black text-navy-800 tracking-tight leading-none">
+                        जॉलीसेशिखोना <span class="text-teal-600 text-xs md:text-sm font-semibold tracking-normal block md:inline">JOLLYSESIKHONA</span>
+                    </h1>
+                    <p class="text-xs text-slate-500 font-medium flex items-center gap-1 mt-0.5">
+                        <i class="fa-solid fa-location-dot text-red-500"></i> जालना, महाराष्ट्र
+                    </p>
+                </div>
+            </div>
+
+            <!-- Header Contact Actions -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#services" class="text-slate-600 hover:text-teal-600 font-semibold transition">सेवा सूची</a>
+                <a href="#calculator" class="text-slate-600 hover:text-teal-600 font-semibold transition">ऑफर कॅल्क्युलेटर</a>
+                <a href="tel:9511807597" class="flex items-center gap-2 bg-navy-800 hover:bg-navy-900 text-white px-4 py-2 rounded-lg font-bold text-sm transition shadow-md">
+                    <i class="fa-solid fa-phone text-gold-400"></i> ९५११८०७५९७
+                </a>
+                <a href="https://wa.me/919511807597?text=नमस्कार!%20मला%20कागदपत्रे%20आणि%20ऑनलाइन%20सेवेविषयी%20माहिती%20हवी%20आहे." target="_blank" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> व्हॉट्सॲप
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-banner text-white py-12 md:py-20 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+            
+            <!-- Left Hero Content -->
+            <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 bg-teal-500/20 border border-teal-400/40 text-teal-300 px-3 py-1 rounded-full text-sm font-semibold">
+                    <i class="fa-solid fa-certificate text-gold-400"></i> १% विश्वासार्ह आणि जलद सेवा केंद्र
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">
+                    तुमच्या सर्व सरकारी आणि ऑनलाइन कागदपत्रांसाठी <span class="text-gold-400 underline decoration-teal-500">एकच ठिकाण!</span>
+                </h2>
+                <p class="text-slate-200 text-base md:text-lg max-w-2xl leading-relaxed">
+                    ईपीएफ (EPF), ईएसआयसी (ESIC), मतदार ओळखपत्र, रेशन कार्ड, जन्म-मृत्यू प्रमाणपत्र व सर्व ऑनलाइन कामांची अडकलेली कामे आता चुटकीसरशी पूर्ण करा!
+                </p>
+
+                <!-- Key Value Badges -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs md:text-sm">
+                    <div class="bg-white/10 backdrop-blur-sm p-2.5 rounded-lg border border-white/10 flex items-center justify-center md:justify-start gap-2">
+                        <i class="fa-solid fa-bolt text-gold-400 text-base"></i>
+                        <span>झटपट प्रोसेसिंग</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-2.5 rounded-lg border border-white/10 flex items-center justify-center md:justify-start gap-2">
+                        <i class="fa-solid fa-user-shield text-teal-400 text-base"></i>
+                        <span>100% सुरक्षित सेवा</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-2.5 rounded-lg border border-white/10 flex items-center justify-center md:justify-start gap-2 col-span-2 sm:col-span-1">
+                        <i class="fa-solid fa-hand-holding-hand text-emerald-400 text-base"></i>
+                        <span>योग्य मार्गदर्शक</span>
+                    </div>
+                </div>
+
+                <!-- Call To Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+                    <a href="tel:9511807597" class="pulse-animation flex items-center justify-center gap-3 bg-gold-500 hover:bg-gold-400 text-slate-900 font-extrabold px-6 py-3.5 rounded-xl text-lg shadow-xl transition">
+                        <i class="fa-solid fa-phone-volume text-xl"></i>
+                        <span>आताच कॉल करा: 9511807597</span>
+                    </a>
+                    <a href="https://wa.me/919511807597?text=नमस्कार!%20मला%20माझ्या%20कागदपत्रांची%20माहिती%20हवी%20आहे." target="_blank" class="flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3.5 rounded-xl text-lg shadow-lg border border-emerald-400 transition">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>व्हॉट्सॲप मेसेज</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Hero Card / Quick Booking Box -->
+            <div class="md:col-span-5 bg-white text-slate-800 rounded-2xl p-6 shadow-2xl border-4 border-gold-400/40 relative">
+                <div class="absolute -top-4 right-6 bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                    मर्यादित जागा: २०
+                </div>
+                <h3 class="text-xl font-extrabold text-navy-800 mb-1 border-b pb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-clipboard-check text-teal-600"></i> त्वरित काम बुक करा
+                </h3>
+                <p class="text-xs text-slate-500 mb-4">खालील फॉर्म भरा, आमची टीम तुम्हाला लगेच संपर्क करेल.</p>
+                
+                <form id="heroQuickForm" onsubmit="handleQuickFormSubmit(event)" class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">पूर्ण नाव *</label>
+                        <input type="text" id="quickName" required placeholder="तुमचे नाव प्रविष्ट करा" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">मोबाइल नंबर *</label>
+                        <input type="tel" id="quickPhone" pattern="[0-9]{10}" maxlength="10" required placeholder="१० अंकी मोबाइल नंबर" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">आवश्यक सेवा निवडा *</label>
+                        <select id="quickService" required class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none">
+                            <option value="">-- सेवा निवडा --</option>
+                            <option value="EPF Services">ईपीएफ (EPF / PF) सेवा</option>
+                            <option value="ESIC Services">ईएसआयसी (ESIC) सेवा</option>
+                            <option value="Voter ID Card">मतदार ओळखपत्र (Voter ID)</option>
+                            <option value="Ration Card">रेशन कार्ड (Ration Card)</option>
+                            <option value="Birth/Death Certificate">जन्म / मृत्यू प्रमाणपत्र</option>
+                            <option value="Aadhaar / PAN Services">आधार / पॅन कार्ड सेवा</option>
+                            <option value="Other Document Service">इतर ऑनलाइन कामे</option>
+                        </select>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-200 rounded-lg p-2.5 flex items-center gap-2">
+                        <input type="checkbox" id="promoCheck" checked class="w-4 h-4 text-teal-600 rounded">
+                        <label for="promoCheck" class="text-xs text-amber-900 font-bold">
+                            'FIRST20' प्रोमो कोड लागू करा (२०% - ५०% सूट)
+                        </label>
+                    </div>
+                    <button type="submit" class="w-full bg-navy-800 hover:bg-navy-900 text-gold-400 font-extrabold py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-base">
+                        <span>कॉल बॅक मिळवा</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Services Section -->
+    <section id="services" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="text-teal-600 font-extrabold uppercase text-xs tracking-wider bg-teal-50 px-3 py-1 rounded-full border border-teal-200">आमच्या सर्व सेवा</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-navy-800 mt-2">
+                आम्ही कोणत्या सेवा पुरवतो?
+            </h2>
+            <p class="text-slate-600 text-sm md:text-base mt-2">
+                सरकारी योजना असो किंवा वैयक्तिक कागदपत्रे, जॉलीसेशिखोना जालना मध्ये प्रत्येक सेवेसाठी योग्य व तत्पर मार्गदर्शन उपलब्ध आहे.
+            </p>
+
+            <!-- Search & Filter Controls -->
+            <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <div class="relative w-full sm:w-80">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400"></i>
+                    <input type="text" id="serviceSearch" onkeyup="filterServices()" placeholder="सेवा शोधा (उदा. EPF, पॅन, रेशन...)" class="w-full pl-9 pr-4 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none">
+                </div>
+                <div class="flex flex-wrap justify-center gap-1.5 text-xs font-bold">
+                    <button onclick="filterCategory('all')" class="cat-btn active bg-navy-800 text-white px-3 py-2 rounded-lg transition" data-cat="all">सर्व</button>
+                    <button onclick="filterCategory('gov')" class="cat-btn bg-white border border-slate-300 text-slate-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition" data-cat="gov">सरकारी कार्ड्स</button>
+                    <button onclick="filterCategory('epf')" class="cat-btn bg-white border border-slate-300 text-slate-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition" data-cat="epf">EPF / ESIC</button>
+                    <button onclick="filterCategory('cert')" class="cat-btn bg-white border border-slate-300 text-slate-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition" data-cat="cert">प्रमाणपत्रे</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Cards Grid -->
+        <div id="servicesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- EPF Card -->
+            <div class="service-card bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="epf" data-name="epf ईपीएफ पीएफ पीएफ क्लेम pf balance">
+                <div>
+                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-navy-800">ईपीएफ (EPF / PF) सेवा</h3>
+                    <p class="text-xs text-teal-600 font-bold mb-2">PF Advance, Withdrawal & KYC</p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> पीएफ शिल्लक (PF Balance) तपासणे</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> ई-केवायसी व बँक अपडेट</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> पीएफ रक्कम काढणे व ट्रान्सफर</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> नाव / जन्मतारीख दुरुस्ती</li>
+                    </ul>
+                </div>
+                <button onclick="openBookingModal('EPF / PF Service')" class="w-full bg-slate-100 hover:bg-teal-500 hover:text-white text-navy-800 font-bold py-2 rounded-lg text-xs transition flex justify-center items-center gap-1">
+                    <span>काम बुक करा</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- ESIC Card -->
+            <div class="service-card bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="epf" data-name="esic ईएसआयसी मेडिकल कार्ड esic card">
+                <div>
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-house-medical"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-navy-800">ईएसआयसी (ESIC) सेवा</h3>
+                    <p class="text-xs text-teal-600 font-bold mb-2">Medical & Insurance Benefits</p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> ईएसआयसी पहिचान कार्ड डाऊनलोड</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> कुटुंब नाव नोंदणी (Family Details)</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> डिस्पेंसरी नाव बदलणे</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> दावा अर्ज (Claim Forms)</li>
+                    </ul>
+                </div>
+                <button onclick="openBookingModal('ESIC Service')" class="w-full bg-slate-100 hover:bg-teal-500 hover:text-white text-navy-800 font-bold py-2 rounded-lg text-xs transition flex justify-center items-center gap-1">
+                    <span>काम बुक करा</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Voter ID Card -->
+            <div class="service-card bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="gov" data-name="voter id मतदार ओळखपत्र नवीन मतदार ओळखपत्र ओळखपत्र दुरुस्ती">
+                <div>
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-navy-800">मतदार ओळखपत्र (Voter ID)</h3>
+                    <p class="text-xs text-teal-600 font-bold mb-2">New Registration & Correction</p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> नवीन मतदार ओळखपत्र अर्ज</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> नाव / पत्ता / फोटो दुरुस्ती</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> डिजिटल पीव्हीसी (PVC) स्मार्ट कार्ड</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> मतदार यादीतील नाव शोधणे</li>
+                    </ul>
+                </div>
+                <button onclick="openBookingModal('Voter ID Card')" class="w-full bg-slate-100 hover:bg-teal-500 hover:text-white text-navy-800 font-bold py-2 rounded-lg text-xs transition flex justify-center items-center gap-1">
+                    <span>काम बुक करा</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Ration Card -->
+            <div class="service-card bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="gov" data-name="ration card रेशन कार्ड नाव समाविष्ट धान्य रेशन">
+                <div>
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-navy-800">रेशन कार्ड सेवा</h3>
+                    <p class="text-xs text-teal-600 font-bold mb-2">Ration Card Updates</p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> नवीन रेशन कार्ड अर्ज</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> नवीन सदस्याचे नाव वाढवणे</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> नाव कमी करणे / विभक्त करणे</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> ऑनलाइन रेशन कार्ड ई-प्रत</li>
+                    </ul>
+                </div>
+                <button onclick="openBookingModal('Ration Card Service')" class="w-full bg-slate-100 hover:bg-teal-500 hover:text-white text-navy-800 font-bold py-2 rounded-lg text-xs transition flex justify-center items-center gap-1">
+                    <span>काम बुक करा</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Birth & Death Certificates -->
+            <div class="service-card bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="cert" data-name="birth death certificate जन्म दाखला मृत्यू दाखला दुरुस्ती प्रमाणपत्र">
+                <div>
+                    <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-navy-800">जन्म व मृत्यू प्रमाणपत्र</h3>
+                    <p class="text-xs text-teal-600 font-bold mb-2">Certificates & Correction</p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> नवीन जन्म दाखला नोंदणी</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> मृत्यू दाखला अर्ज</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> इंग्रजी / मराठी नाव दुरुस्ती</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> नमुना / प्रतिज्ञापत्र तयार करणे</li>
+                    </ul>
+                </div>
+                <button onclick="openBookingModal('Birth & Death Certificate')" class="w-full bg-slate-100 hover:bg-teal-500 hover:text-white text-navy-800 font-bold py-2 rounded-lg text-xs transition flex justify-center items-center gap-1">
+                    <span>काम बुक करा</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Aadhaar & PAN Card -->
+            <div class="service-card bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="gov" data-name="aadhaar pan card आधार पॅन कार्ड लिंक पॅन कार्ड दुरुस्ती">
+                <div>
+                    <div class="w-12 h-12 bg-rose-100 text-rose-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-address-card"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-navy-800">आधार व पॅन कार्ड</h3>
+                    <p class="text-xs text-teal-600 font-bold mb-2">Instant PAN & Linking</p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> १० मिनिटांत इन्स्टंट पॅन कार्ड</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> पॅन - आधार लिंक (Pan-Aadhaar Link)</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> पॅन कार्ड दुरुस्ती (Correction)</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> आधार अपडेट स्टेटस तपासणे</li>
+                    </ul>
+                </div>
+                <button onclick="openBookingModal('Aadhaar & PAN Service')" class="w-full bg-slate-100 hover:bg-teal-500 hover:text-white text-navy-800 font-bold py-2 rounded-lg text-xs transition flex justify-center items-center gap-1">
+                    <span>काम बुक करा</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- ABHA & Ayushman Card -->
+            <div class="service-card bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="gov" data-name="abha ayushman bharat health card आभा कार्ड आयुष्मान भारत आरोग्य">
+                <div>
+                    <div class="w-12 h-12 bg-cyan-100 text-cyan-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-navy-800">आभा व आयुष्मान कार्ड</h3>
+                    <p class="text-xs text-teal-600 font-bold mb-2">Government Health Cards</p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> ५ लाख मोफत उपचारांचे आयुष्मान कार्ड</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> डिजिटल आभा (ABHA) हेल्थ कार्ड</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> त्वरित डाऊनलोड व प्रिंटिंग</li>
+                    </ul>
+                </div>
+                <button onclick="openBookingModal('ABHA & Ayushman Card')" class="w-full bg-slate-100 hover:bg-teal-500 hover:text-white text-navy-800 font-bold py-2 rounded-lg text-xs transition flex justify-center items-center gap-1">
+                    <span>काम बुक करा</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Lamination & Printing -->
+            <div class="service-card bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between" data-category="cert" data-name="lamination printing लॅमिनेशन कलर प्रिंटिंग स्मार्ट कार्ड">
+                <div>
+                    <div class="w-12 h-12 bg-orange-100 text-orange-700 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-print"></i>
+                    </div>
+                    <h3 class="text-lg font-extrabold text-navy-800">लॅमिनेशन व प्रिंटिंग</h3>
+                    <p class="text-xs text-teal-600 font-bold mb-2">High Quality Documents</p>
+                    <ul class="text-xs text-slate-600 space-y-1.5 mb-4">
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> वॉटरप्रूफ लॅमिनेशन (Lamination)</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> एचडी कलर प्रिंटआउट्स</li>
+                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> पीव्हीसी (PVC) प्लास्टिक कार्ड्स</li>
+                    </ul>
+                </div>
+                <button onclick="openBookingModal('Lamination & Printing')" class="w-full bg-slate-100 hover:bg-teal-500 hover:text-white text-navy-800 font-bold py-2 rounded-lg text-xs transition flex justify-center items-center gap-1">
+                    <span>काम बुक करा</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Price Estimator & Promo Discount Calculator -->
+    <section id="calculator" class="py-12 bg-slate-100 border-y border-slate-200 px-4">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-6 md:p-8 border border-slate-200">
+            <div class="text-center mb-6">
+                <span class="bg-gold-500/20 text-amber-800 font-extrabold text-xs px-3 py-1 rounded-full uppercase border border-gold-400">झटपट दर अंदाज</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-navy-800 mt-2">
+                    ऑफर डिस्काउंट कॅल्क्युलेटर
+                </h2>
+                <p class="text-xs md:text-sm text-slate-500 mt-1">
+                    तुम्हाला आवश्यक सेवा निवडा आणि तुमच्या स्पेशल सवलतीचा अंदाज मिळवा!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                
+                <!-- Service Selector List -->
+                <div class="space-y-3">
+                    <label class="block text-sm font-bold text-slate-700">१. सेवा निवडा (एक किंवा अधिक):</label>
+                    <div class="space-y-2 text-sm max-h-56 overflow-y-auto pr-2">
+                        <label class="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
+                            <span class="flex items-center gap-2">
+                                <input type="checkbox" class="calc-checkbox w-4 h-4 text-teal-600 rounded" data-price="200" data-name="ईपीएफ सेवा" onchange="calculateTotal()">
+                                <span>ईपीएफ / पीएफ (EPF Work)</span>
+                            </span>
+                            <span class="font-bold text-slate-600">₹२००</span>
+                        </label>
+                        <label class="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
+                            <span class="flex items-center gap-2">
+                                <input type="checkbox" class="calc-checkbox w-4 h-4 text-teal-600 rounded" data-price="150" data-name="मतदार कार्ड" onchange="calculateTotal()">
+                                <span>मतदार ओळखपत्र अर्ज / दुरुस्ती</span>
+                            </span>
+                            <span class="font-bold text-slate-600">₹१५०</span>
+                        </label>
+                        <label class="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
+                            <span class="flex items-center gap-2">
+                                <input type="checkbox" class="calc-checkbox w-4 h-4 text-teal-600 rounded" data-price="180" data-name="पॅन कार्ड" onchange="calculateTotal()">
+                                <span>इन्स्टंट पॅन / दुरुस्ती</span>
+                            </span>
+                            <span class="font-bold text-slate-600">₹१८०</span>
+                        </label>
+                        <label class="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
+                            <span class="flex items-center gap-2">
+                                <input type="checkbox" class="calc-checkbox w-4 h-4 text-teal-600 rounded" data-price="250" data-name="जन्म/मृत्यू दाखला" onchange="calculateTotal()">
+                                <span>जन्म / मृत्यू दाखला दुरुस्ती</span>
+                            </span>
+                            <span class="font-bold text-slate-600">₹२५०</span>
+                        </label>
+                        <label class="flex items-center justify-between p-2.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 cursor-pointer">
+                            <span class="flex items-center gap-2">
+                                <input type="checkbox" class="calc-checkbox w-4 h-4 text-teal-600 rounded" data-price="100" data-name="लॅमिनेशन व इतर" onchange="calculateTotal()">
+                                <span>लॅमिनेशन व प्रिंटिंग सेवा</span>
+                            </span>
+                            <span class="font-bold text-slate-600">₹१००</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Price Summary Box -->
+                <div class="bg-navy-900 text-white rounded-2xl p-6 border border-teal-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center border-b border-slate-700 pb-3 mb-4">
+                            <span class="text-sm font-semibold text-slate-300">एकूण मूळ किंमत:</span>
+                            <span id="originalPrice" class="text-lg font-bold text-slate-300">₹०</span>
+                        </div>
+                        
+                        <!-- Coupon Input -->
+                        <div class="mb-4">
+                            <label class="block text-xs font-bold text-gold-400 mb-1">कूपन कोड:</label>
+                            <div class="flex gap-2">
+                                <input type="text" id="couponCode" value="FIRST20" class="uppercase px-3 py-1.5 text-xs bg-slate-800 text-white border border-slate-600 rounded-lg w-full font-mono outline-none">
+                                <button onclick="calculateTotal()" class="bg-gold-500 text-slate-900 font-bold px-3 py-1.5 rounded-lg text-xs hover:bg-gold-400 transition">लागू करा</button>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center text-emerald-400 text-sm mb-2 font-bold">
+                            <span>ऑफर डिस्काउंट (30% off):</span>
+                            <span id="discountAmount">- ₹०</span>
+                        </div>
+
+                        <div class="flex justify-between items-center text-xl font-extrabold text-white border-t border-slate-700 pt-3">
+                            <span>अंतिम अंदाज:</span>
+                            <span id="finalPrice" class="text-2xl text-gold-400">₹०</span>
+                        </div>
+                    </div>
+
+                    <button onclick="bookEstimatedServices()" class="mt-6 w-full bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold py-3 rounded-xl transition text-center shadow-lg flex justify-center items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>हा अंदाज व्हॉट्सॲपवर पाठवा</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AIDA Marketing & Attention Banner -->
+    <section class="py-12 px-4 max-w-7xl mx-auto">
+        <div class="bg-gradient-to-r from-red-600 via-orange-600 to-amber-600 text-white rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                
+                <div class="lg:col-span-8 space-y-3">
+                    <div class="inline-block bg-black/30 text-gold-300 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                        <i class="fa-solid fa-triangle-exclamation"></i> थांबलेली कामे आताच मार्गी लावा!
+                    </div>
+                    <h2 class="text-2xl md:text-4xl font-black">
+                        तुमचे कोणतेही सरकारी कागदपत्र अडकले आहे का?
+                    </h2>
+                    <p class="text-slate-100 text-sm md:text-base leading-relaxed">
+                        वारंवार चकरा मारणे बंद करा! जॉलीसेशिखोना (जालना) मध्ये एकाच छताखाली अचूक, कायदेशीर व जलद मार्गदर्शन मिळवा. पहिल्या २० ग्राहकांसाठी विशेष सवलत लागू आहे.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-4 text-center lg:text-right">
+                    <a href="https://wa.me/919511807597?text=नमस्कार!%20माझे%20कागदपत्र%20अडकले%20आहे,%20कृपया%20मदत करा." target="_blank" class="inline-flex items-center gap-3 bg-white text-slate-900 font-black px-8 py-4 rounded-2xl text-lg shadow-xl hover:bg-gold-400 transition transform hover:-translate-y-1">
+                        <i class="fa-brands fa-whatsapp text-emerald-600 text-2xl"></i>
+                        <span>चॅट सुरू करा</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us & Customer Testimonials -->
+    <section class="py-12 bg-white px-4">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-navy-800">
+                    जॉलीसेशिखोना का निवडावे?
+                </h2>
+                <p class="text-slate-500 text-sm mt-1">जालन्यातील नागरिकांचे विश्वासू डिजिटल केंद्र</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-800 mb-2">100% अचूक काम</h3>
+                    <p class="text-xs text-slate-600">कोणतीही चूक न होता तुमचे अर्ज वेळेवर आणि योग्य सरकारी नियमांनुसार भरले जातात.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-14 h-14 bg-gold-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-800 mb-2">वाजवी आणि पारदर्शक दर</h3>
+                    <p class="text-xs text-slate-600">कोणतेही गुपित शुल्क नाही! सर्व सेवांचे दर अत्यंत रास्त व परवडणारे आहेत.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-800 mb-2">उत्तम सपोर्ट</h3>
+                    <p class="text-xs text-slate-600">काम पूर्ण होईपर्यंत तुम्हाला फोन व व्हॉट्सॲपवर वेळोवेळी अपडेट्स दिले जातात.</p>
+                </div>
+            </div>
+
+            <!-- Customer Reviews Slider/Cards -->
+            <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
+                <h3 class="text-xl font-bold text-navy-800 mb-6 text-center">ग्राहकांचे अभिप्राय (Testimonials)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <div class="flex text-gold-400 text-xs mb-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-3">"माझा PF काढण्याचे काम बऱ्याच दिवसांपासून अडकले होते. जॉलीसेशिखोना मध्ये अवघ्या काही दिवसांत काम पूर्ण झाले. खूप छान सेवा!"</p>
+                        <p class="text-xs font-bold text-navy-800">- रमेश जाधव, जालना</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <div class="flex text-gold-400 text-xs mb-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-3">"रेशन कार्डावर नवीन नाव वाढवायचे होते, अगदी सोप्या पद्धतीने आणि योग्य दरात काम झाले. नक्की भेट द्या!"</p>
+                        <p class="text-xs font-bold text-navy-800">- सविता गायकवाड, जालना</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                        <div class="flex text-gold-400 text-xs mb-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-3">"१० मिनिटांत मला पॅन कार्ड मिळाले आणि सर्व सरकारी फॉर्म खूप फास्ट भरून मिळतात."</p>
+                        <p class="text-xs font-bold text-navy-800">- विकास जगताप, जालना</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-navy-800 text-white pt-12 pb-8 px-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            
+            <div class="space-y-3">
+                <h3 class="text-xl font-black text-gold-400">JOLLYSESIKHONA</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    जालन्यातील अग्रगण्य डिजिटल सेवा केंद्र. सरकारी कागदपत्रे, ईपीएफ, ईएसआयसी आणि सर्व ऑनलाइन फॉर्म भरण्यासाठी विश्वसनीय स्थान.
+                </p>
+                <div class="text-xs text-teal-400 font-bold">
+                    <i class="fa-solid fa-location-dot"></i> पत्ता: जालना, महाराष्ट्र - ४३१२०३
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-bold text-white mb-3 uppercase tracking-wider">महत्वाच्या सेवा</h4>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li><a href="#services" class="hover:text-teal-400 transition">ईपीएफ व पीएफ क्लेम</a></li>
+                    <li><a href="#services" class="hover:text-teal-400 transition">ईएसआयसी कार्ड</a></li>
+                    <li><a href="#services" class="hover:text-teal-400 transition">मतदार ओळखपत्र</a></li>
+                    <li><a href="#services" class="hover:text-teal-400 transition">जन्म व मृत्यू प्रमाणपत्र</a></li>
+                    <li><a href="#services" class="hover:text-teal-400 transition">रेशन कार्ड सेवा</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-bold text-white mb-3 uppercase tracking-wider">संपर्क व वेळ</h4>
+                <div class="text-xs text-slate-300 space-y-2">
+                    <p><i class="fa-solid fa-phone text-teal-400 mr-2"></i> 9511807597</p>
+                    <p><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> 9511807597</p>
+                    <p><i class="fa-solid fa-clock text-gold-400 mr-2"></i> सकाळी ९:०० ते रात्री ८:००</p>
+                    <p><i class="fa-solid fa-calendar-check text-blue-400 mr-2"></i> सोमवार ते शनिवार खुला</p>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-bold text-white mb-3 uppercase tracking-wider">स्पेशल ऑफर</h4>
+                <p class="text-xs text-slate-300 mb-3">पहिल्या २० ग्राहकांसाठी २०% ते ५०% सवलतीचा फायदा घेण्यासाठी आजच संपर्क करा.</p>
+                <a href="tel:9511807597" class="inline-block bg-gold-500 text-slate-900 font-extrabold px-4 py-2 rounded-lg text-xs hover:bg-gold-400 transition">
+                    कॉल करा: ९५११८०७५९७
+                </a>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-slate-700/60 pt-6 text-center text-xs text-slate-400">
+            <p>© 2026 JOLLYSESIKHONA (जॉलीसेशिखोना), Jalna. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Bottom Action Bar for Mobile -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-2 z-50 md:hidden flex gap-2 shadow-2xl">
+        <a href="tel:9511807597" class="flex-1 bg-navy-800 text-gold-400 font-extrabold py-2.5 rounded-xl text-xs flex justify-center items-center gap-2 shadow">
+            <i class="fa-solid fa-phone"></i> कॉल करा
+        </a>
+        <a href="https://wa.me/919511807597?text=नमस्कार!%20मला%20माझ्या%20कागदपत्रांविषयी%20माहिती%20हवी%20आहे." target="_blank" class="flex-1 bg-emerald-600 text-white font-extrabold py-2.5 rounded-xl text-xs flex justify-center items-center gap-2 shadow">
+            <i class="fa-brands fa-whatsapp text-lg"></i> व्हॉट्सॲप
+        </a>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-100 relative">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <h3 class="text-xl font-extrabold text-navy-800 mb-1" id="modalServiceName">सेवा बुक करा</h3>
+            <p class="text-xs text-slate-500 mb-4">तुमची माहिती प्रविष्ट करा. आम्ही लगेच कॉल करू.</p>
+
+            <form onsubmit="handleModalFormSubmit(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">तुमचे नाव</label>
+                    <input type="text" id="modalName" required class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">मोबाइल नंबर</label>
+                    <input type="tel" id="modalPhone" pattern="[0-9]{10}" maxlength="10" required class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">काम / समस्येचे संक्षिप्त वर्णन</label>
+                    <textarea id="modalNote" rows="2" placeholder="उदा. PF Advance काढणे आहे..." class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-2.5 rounded-xl text-sm transition">
+                    व्हॉट्सॲपवर पाठवा
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        let selectedModalService = "";
+
+        // Modal Handler
+        function openBookingModal(serviceName) {
+            selectedModalService = serviceName;
+            document.getElementById('modalServiceName').innerText = serviceName + ' बुक करा';
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        // Handle Quick Form Submission
+        function handleQuickFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('quickName').value;
+            const phone = document.getElementById('quickPhone').value;
+            const service = document.getElementById('quickService').value;
+            const hasPromo = document.getElementById('promoCheck').checked;
+
+            const text = `नमस्कार! माझे नाव ${name} आहे.%0Aमाझा फोन नंबर: ${phone}%0Aसेवा: ${service}%0Aऑफर कोड: ${hasPromo ? 'FIRST20 (होय)' : 'नाही'}`;
+            window.open(`https://wa.me/919511807597?text=${text}`, '_blank');
+        }
+
+        // Handle Modal Form Submission
+        function handleModalFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('modalName').value;
+            const phone = document.getElementById('modalPhone').value;
+            const note = document.getElementById('modalNote').value;
+
+            const text = `नमस्कार! माझे नाव ${name} आहे.%0Aमाझा नंबर: ${phone}%0Aनिवडलेली सेवा: ${selectedModalService}%0Aटीप: ${note}`;
+            window.open(`https://wa.me/919511807597?text=${text}`, '_blank');
+            closeBookingModal();
+        }
+
+        // Services Filter by Search Input
+        function filterServices() {
+            const query = document.getElementById('serviceSearch').value.toLowerCase();
+            const cards = document.querySelectorAll('.service-card');
+
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-name').toLowerCase();
+                if (searchData.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Services Filter by Category
+        function filterCategory(cat) {
+            const cards = document.querySelectorAll('.service-card');
+            const buttons = document.querySelectorAll('.cat-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-cat') === cat) {
+                    btn.classList.add('bg-navy-800', 'text-white');
+                    btn.classList.remove('bg-white', 'text-slate-700');
+                } else {
+                    btn.classList.remove('bg-navy-800', 'text-white');
+                    btn.classList.add('bg-white', 'text-slate-700');
+                }
+            });
+
+            cards.forEach(card => {
+                if (cat === 'all' || card.getAttribute('data-category') === cat) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Calculate Interactive Price Estimation
+        function calculateTotal() {
+            const checkboxes = document.querySelectorAll('.calc-checkbox');
+            let original = 0;
+            let selectedList = [];
+
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    original += parseInt(cb.getAttribute('data-price'));
+                    selectedList.push(cb.getAttribute('data-name'));
+                }
+            });
+
+            const coupon = document.getElementById('couponCode').value.trim().toUpperCase();
+            let discountRate = 0;
+
+            if (coupon === 'FIRST20' && original > 0) {
+                discountRate = 0.30; // 30% default discount for demo
+            }
+
+            const discount = Math.round(original * discountRate);
+            const finalPrice = original - discount;
+
+            document.getElementById('originalPrice').innerText = '₹' + original;
+            document.getElementById('discountAmount').innerText = '- ₹' + discount;
+            document.getElementById('finalPrice').innerText = '₹' + finalPrice;
+        }
+
+        // Send estimated price via WhatsApp
+        function bookEstimatedServices() {
+            const checkboxes = document.querySelectorAll('.calc-checkbox');
+            let selectedList = [];
+
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    selectedList.push(cb.getAttribute('data-name'));
+                }
+            });
+
+            if (selectedList.length === 0) {
+                alert('कृपया किमान एक सेवा निवडा!');
+                return;
+            }
+
+            const finalPrice = document.getElementById('finalPrice').innerText;
+            const text = `नमस्कार! मी कॅल्क्युलेटरद्वारे खालील सेवा निवडल्या आहेत:%0A- ${selectedList.join('%0A- ')}%0A%0Aअंदाजे किंमत: ${finalPrice} (FIRST20 सवलतीसह)`;
+            window.open(`https://wa.me/919511807597?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
